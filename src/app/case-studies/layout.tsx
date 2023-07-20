@@ -1,4 +1,4 @@
-import { Container } from "../../../components/Components"
+import { Container } from "../../components/Components"
 
 export default function StudyLayout({
   children,
