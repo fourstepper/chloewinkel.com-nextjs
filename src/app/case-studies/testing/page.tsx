@@ -1,8 +1,6 @@
 import * as c from "../../../components/Components";
 import Image from "next/image";
 
-const type = "branding";
-
 export default function TestingStudy() {
   return (
     <section>
