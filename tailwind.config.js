@@ -3,7 +3,7 @@ module.exports = {
   // TODO: pick font to use
   // theme: {
   //   fontFamily: {
-  //     sans: ['"PT Sans"', 'sans-serif']
+  //     sans: ['"Syne"', 'sans-serif']
   //   }
   // },
   content: [
