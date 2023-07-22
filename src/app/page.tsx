@@ -1,75 +1,26 @@
-import * as c from "../components/Components";
 import Image from "next/image";
 import Link from "next/link";
-import Motion from "../components/Motion";
 
 export default function Home() {
   return (
     <main>
-      <c.h1>Chloe Winkel</c.h1>
-      <c.FlexGrid>
+      <div className="flex flex-col gap-8">
+        <h1 className="text-center text-6xl">Chloe Winkel</h1>
+        <div className="gap-y-8"></div>
+        <p className="text-center text-xl">Brands</p>
         <div>
-          <c.p>Brands</c.p>
           <Link href="branding">
-            <div className="grow relative w-[300px] sm:w-[600px] md:w-[750px] lg:w-[900px] h-36">
-              <Image src="/banner.svg" alt="branding" fill={true} />
+            <div className={"image-container"}>
+              <Image
+                src="/banner.svg"
+                alt="branding"
+                fill={true}
+                className={"image"}
+              />
             </div>
           </Link>
         </div>
-      </c.FlexGrid>
-      <c.FlexGrid>
-        <div>
-          <c.p>Brands</c.p>
-          <Link href="branding">
-            <div className="grow relative w-[300px] sm:w-[600px] md:w-[750px] lg:w-[900px] h-36">
-              <Image src="/banner.svg" alt="branding" fill={true} />
-            </div>
-          </Link>
-        </div>
-      </c.FlexGrid>
-      <c.FlexGrid>
-        <div>
-          <c.p>Brands</c.p>
-          <Link href="branding">
-            <div className="grow relative w-[300px] sm:w-[600px] md:w-[750px] lg:w-[900px] h-36">
-              <Image src="/banner.svg" alt="branding" fill={true} />
-            </div>
-          </Link>
-        </div>
-      </c.FlexGrid>
-      <c.FlexGrid>
-        <div>
-          <c.p>Brands</c.p>
-          <Link href="branding">
-            <div className="grow relative w-[300px] sm:w-[600px] md:w-[750px] lg:w-[900px] h-36">
-              <Image src="/banner.svg" alt="branding" fill={true} />
-            </div>
-          </Link>
-        </div>
-      </c.FlexGrid>
-      <c.FlexGrid>
-        <div>
-          <c.p>Brands</c.p>
-          <Link href="branding">
-            <div className="grow relative w-[300px] sm:w-[600px] md:w-[750px] lg:w-[900px] h-36">
-              <Image src="/banner.svg" alt="branding" fill={true} />
-            </div>
-          </Link>
-        </div>
-      </c.FlexGrid>
-      <c.FlexGrid>
-        <div>
-          <c.p>Something else</c.p>
-          <Link href="branding">
-            <div className="grow relative w-[300px] sm:w-[600px] md:w-[750px] lg:w-[900px] h-36">
-              <Image src="/banner.svg" alt="branding" fill={true} />
-            </div>
-          </Link>
-          <div className="justify-items-center items-center text-center">
-            <Motion></Motion>
-          </div>
-        </div>
-      </c.FlexGrid>
+      </div>
     </main>
   );
 }

@@ -1,12 +1,11 @@
-import * as c from "../../../components/Components";
 import Image from "next/image";
 import Link from "next/link";
 
 export default async function Brandings() {
   return (
-    <section>
-      <c.h1> Branding case studies </c.h1>
-      <c.p>
+    <div className="flex flex-col gap-8">
+      <h1 className="text-center text-6xl">Branding case studies </h1>
+      <p className="text-l text-center">
         Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
         enim labore culpa sint ad nisi Lorem pariatur mollit ex esse
         exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit
@@ -18,53 +17,19 @@ export default async function Brandings() {
         Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
         Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa
         et culpa duis.
-      </c.p>
-      <c.FlexGrid>
-        <div>
-          <c.p>Example case study</c.p>
-          <Link href="branding/example-brand">
-            <div className="grow relative w-[300px] h-[300px]">
-              <Image src="/square.svg" alt="just a square" fill={true} />
-            </div>
-          </Link>
-        </div>
-        <div>
-          <c.p>Example case study</c.p>
-          <Link href="branding/example-brand">
-            <div className="grow relative w-[300px] h-[300px]">
-              <Image src="/square.svg" alt="just a square" fill={true} />
-            </div>
-          </Link>
-        </div>
-        <div>
-          <c.p>Example case study</c.p>
-          <Link href="branding/example-brand">
-            <div className="grow relative w-[300px] h-[300px]">
-              <Image src="/square.svg" alt="just a square" fill={true} />
-            </div>
-          </Link>
-        </div>
-        <div>
-          <c.p>Example case study</c.p>
-          <Link href="branding/example-brand">
-            <div className="grow relative w-[300px] h-[300px]">
-              <Image src="/square.svg" alt="just a square" fill={true} />
-            </div>
-          </Link>
-        </div>
-        <div>
-          <c.p>Example case study</c.p>
-          <Link href="branding/example-brand">
-            <div className="grow relative w-[300px] h-[300px]">
-              <Image src="/square.svg" alt="just a square" fill={true} />
-            </div>
-          </Link>
-        </div>
-      </c.FlexGrid>
+      </p>
+      <p className="text-xl text-center">Example case study</p>
+      <div className="flex flex-row place-content-center gap-8">
+        <Link href="branding/example-brand">
+          <div className="grow relative w-[300px] h-[300px]">
+            <Image src="/square.svg" alt="just a square" fill={true} />
+          </div>
+        </Link>
+      </div>
       {/* <div className="grid grid-flow-col justify-items-center pt-8"> */}
       {/*   <Image src="/vercel.svg" alt="vercel logo" width={1000} height={600} /> */}
       {/* </div> */}
       {/* <c.p>This could be some banner or something like that</c.p> */}
-    </section>
+    </div>
   );
 }

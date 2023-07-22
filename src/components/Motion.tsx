@@ -1,18 +1,30 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { useInView, motion, LayoutGroup } from "framer-motion";
 
-function Motion() {
+function ClapMotion({ children }: { children: React.ReactNode }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      transition={{ duration: 5 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-    >
-      <h1>Hello</h1>
-    </motion.div>
+    <div ref={ref}>
+      <motion.div
+        animate={isInView ? { justifyContent: "flex-end" } : {}}
+        transition={{ duration: 1 }}
+      >
+        {children}
+      </motion.div>
+    </div>
   );
 }
 
-export default Motion;
+export function Motion({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <LayoutGroup>
+        <ClapMotion>{children}</ClapMotion>
+      </LayoutGroup>
+    </>
+  );
+}
