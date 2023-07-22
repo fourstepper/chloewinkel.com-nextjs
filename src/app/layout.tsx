@@ -25,16 +25,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={font.className}>
       <head>
-        <script
-          async
-          src="https://ackee.robinopletal.com/tracker.js"
-          data-ackee-server="https://ackee.robinopletal.com"
-          data-ackee-domain-id="c09d9e42-4171-4a7e-8236-2802140e3df8"
-        ></script>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className="flex flex-col h-screen justify-between items-center">
         {/* this div seems to be our "container" */}
-        <div className="mb-auto p-12 md:container md:mx-auto">{children}</div>
+        <div className="flex flex-wrap flex-row justify-items-center place-content-center mb-auto p-12 container mx-auto">
+          {children}
+        </div>
         <Footer></Footer>
       </body>
     </html>
