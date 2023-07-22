@@ -10,7 +10,9 @@ export default function Home() {
         <div>
           <c.p>Brands</c.p>
           <Link href="branding">
-            <Image src="/banner.svg" alt="branding" width="900" height="200" />
+            <div className="grow relative w-[900px] h-36">
+              <Image src="/banner.svg" alt="branding" fill={true} />
+            </div>
           </Link>
         </div>
       </c.FlexGrid>
@@ -18,7 +20,9 @@ export default function Home() {
         <div>
           <c.p>Something else</c.p>
           <Link href="branding">
-            <Image src="/banner.svg" alt="branding" width="900" height="200" />
+            <div className="grow relative w-[900px] h-36">
+              <Image src="/banner.svg" alt="branding" fill={true} />
+            </div>
           </Link>
         </div>
       </c.FlexGrid>

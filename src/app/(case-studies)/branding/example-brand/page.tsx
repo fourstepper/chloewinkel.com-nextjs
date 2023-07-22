@@ -1,7 +1,7 @@
 import * as c from "../../../../components/Components";
 import Image from "next/image";
 
-export default function TestingStudy() {
+export default function Brand() {
   return (
     <section>
       <c.h1>Example brand</c.h1>

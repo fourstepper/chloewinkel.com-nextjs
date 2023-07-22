@@ -23,56 +23,41 @@ export default async function Brandings() {
         <div>
           <c.p>Example case study</c.p>
           <Link href="branding/example-brand">
-            <Image
-              src="/square.svg"
-              alt="just a square"
-              width="300"
-              height="300"
-            />
+            <div className="grow relative w-[300px] h-[300px]">
+              <Image src="/square.svg" alt="just a square" fill={true} />
+            </div>
           </Link>
         </div>
         <div>
           <c.p>Example case study</c.p>
           <Link href="branding/example-brand">
-            <Image
-              src="/square.svg"
-              alt="just a square"
-              width="300"
-              height="300"
-            />
+            <div className="grow relative w-[300px] h-[300px]">
+              <Image src="/square.svg" alt="just a square" fill={true} />
+            </div>
           </Link>
         </div>
         <div>
           <c.p>Example case study</c.p>
           <Link href="branding/example-brand">
-            <Image
-              src="/square.svg"
-              alt="just a square"
-              width="300"
-              height="300"
-            />
+            <div className="grow relative w-[300px] h-[300px]">
+              <Image src="/square.svg" alt="just a square" fill={true} />
+            </div>
           </Link>
         </div>
         <div>
           <c.p>Example case study</c.p>
           <Link href="branding/example-brand">
-            <Image
-              src="/square.svg"
-              alt="just a square"
-              width="300"
-              height="300"
-            />
+            <div className="grow relative w-[300px] h-[300px]">
+              <Image src="/square.svg" alt="just a square" fill={true} />
+            </div>
           </Link>
         </div>
         <div>
           <c.p>Example case study</c.p>
           <Link href="branding/example-brand">
-            <Image
-              src="/square.svg"
-              alt="just a square"
-              width="300"
-              height="300"
-            />
+            <div className="grow relative w-[300px] h-[300px]">
+              <Image src="/square.svg" alt="just a square" fill={true} />
+            </div>
           </Link>
         </div>
       </c.FlexGrid>
