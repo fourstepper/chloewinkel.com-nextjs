@@ -28,4 +28,4 @@ pipeline:
       - vercel --token $${VERCEL} --prod
     secrets: [ VERCEL ]
     when:
-      branch: [ master ]
+      branch: [ main ]
