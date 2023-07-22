@@ -10,7 +10,7 @@ export default function Home() {
         <div>
           <c.p>Brands</c.p>
           <Link href="branding">
-            <div className="grow relative w-[900px] h-36">
+            <div className="grow relative w-[300px] sm:w-[600px] md:w-[750px] lg:w-[900px] h-36">
               <Image src="/banner.svg" alt="branding" fill={true} />
             </div>
           </Link>
@@ -20,7 +20,7 @@ export default function Home() {
         <div>
           <c.p>Something else</c.p>
           <Link href="branding">
-            <div className="grow relative w-[900px] h-36">
+            <div className="grow relative w-[300px] sm:w-[600px] md:w-[750px] lg:w-[900px] h-36">
               <Image src="/banner.svg" alt="branding" fill={true} />
             </div>
           </Link>
