@@ -1,6 +1,6 @@
 import { Container } from "../../components/Components";
 
-export default function StudyLayout({
+export default function CaseStudiesLayout({
   children,
 }: {
   children: React.ReactNode;

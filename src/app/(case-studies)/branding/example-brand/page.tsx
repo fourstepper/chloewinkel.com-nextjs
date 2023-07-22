@@ -1,10 +1,10 @@
-import * as c from "../../../components/Components";
+import * as c from "../../../../components/Components";
 import Image from "next/image";
 
 export default function TestingStudy() {
   return (
     <section>
-      <c.h1>Example case study</c.h1>
+      <c.h1>Example brand</c.h1>
       <c.p>
         Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
         enim labore culpa sint ad nisi Lorem pariatur mollit ex esse
@@ -19,15 +19,21 @@ export default function TestingStudy() {
         et culpa duis.
       </c.p>
       <c.p>Single image</c.p>
-      <c.GridWrapper>
-        <Image src="/next.svg" alt="next logo" width="200" height="30" />
-      </c.GridWrapper>
+      <c.FlexGrid>
+        <Image src="/next.svg" alt="next logo" width="400" height="30" />
+      </c.FlexGrid>
       <c.p>Double image</c.p>
-      <c.GridWrapper>
+      <c.FlexGrid>
+        <Image src="/next.svg" alt="next logo" width="400" height="30" />
+        <Image src="/next.svg" alt="next logo" width="400" height="30" />
+      </c.FlexGrid>
+      <c.p>Four images</c.p>
+      <c.FlexGrid>
         <Image src="/next.svg" alt="next logo" width="200" height="30" />
         <Image src="/next.svg" alt="next logo" width="200" height="30" />
         <Image src="/next.svg" alt="next logo" width="200" height="30" />
-      </c.GridWrapper>
+        <Image src="/next.svg" alt="next logo" width="200" height="30" />
+      </c.FlexGrid>
     </section>
   );
 }

@@ -1,13 +1,13 @@
 export function Container({ children }: { children: React.ReactNode }) {
   return (
     // <div className="grid grid-flow-col sm:px-10 md:px-40 xl:px-60 2xl:px-120">
-    <div className="grid grid-flow-col content-center">{children}</div>
+    <div className="flex flex-col content-center">{children}</div>
   );
 }
 
-export function GridWrapper({ children }: { children: React.ReactNode }) {
+export function FlexGrid({ children }: { children: React.ReactNode }) {
   return (
-    <div className="grid grid-flow-row lg:grid-flow-col place-content-center relative pt-8 gap-12 md:gap-24">
+    <div className="flex flex-wrap flex-row justify-items-center place-content-center gap-x-24 gap-y-8 pt-8">
       {children}
     </div>
   );
