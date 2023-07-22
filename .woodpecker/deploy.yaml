@@ -1,0 +1,23 @@
+pipeline:
+  init:
+    image: docker.io/dockette/vercel
+    commands:
+      - vercel --token $${VERCEL} project add chloewinkel
+      - vercel --token $${VERCEL} link --confirm -p chloewinkel
+    secrets: [ VERCEL ]
+
+  deploy-preview:
+    image: docker.io/dockette/vercel
+    commands:
+      - vercel --token $${VERCEL} pull
+      - vercel --token $${VERCEL}
+    secrets: [ VERCEL ]
+
+  deploy-production:
+    image: docker.io/dockette/vercel
+    commands:
+      - vercel --token $${VERCEL} pull
+      - vercel --token $${VERCEL} --prod
+    secrets: [ VERCEL ]
+    when:
+      event: [manual]
