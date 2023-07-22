@@ -1,24 +1,34 @@
 pipeline:
+  publish-vercel-image:
+    image: woodpeckerci/plugin-docker-buildx
+    settings:
+      repo: codeberg.org/${CI_REPO_OWNER}/vercel
+      registry: codeberg.org
+      dockerfile: .woodpecker/Dockerfile-vercel
+      tags: latest
+      username: ${CI_REPO_OWNER}
+      password:
+        from_secret: cb_token
+
   init:
-    image: docker.io/library/node
+    image: codeberg.org/${CI_REPO_OWNER}/vercel
     commands:
-      - npm install -g vercel
       - vercel --token $${VERCEL} project add chloewinkel
       - vercel --token $${VERCEL} link -p chloewinkel --yes
     secrets: [ VERCEL ]
 
   deploy-preview:
-    image: docker.io/library/node
+    image: codeberg.org/${CI_REPO_OWNER}/vercel
     commands:
-      - npm install -g vercel
       - vercel --token $${VERCEL} pull
       - vercel --token $${VERCEL}
     secrets: [ VERCEL ]
+    when:
+      event: [ push ]
 
   deploy-production:
-    image: docker.io/library/node
+    image: codeberg.org/${CI_REPO_OWNER}/vercel
     commands:
-      - npm install -g vercel
       - vercel --token $${VERCEL} pull
       - vercel --token $${VERCEL} --prod
     secrets: [ VERCEL ]
