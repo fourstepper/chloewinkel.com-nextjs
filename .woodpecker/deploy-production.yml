@@ -9,6 +9,21 @@ pipeline:
       event:
         - push
         - manual
+
+  deploy-preview:
+    image: codeberg.org/${CI_REPO_OWNER}/vercel
+    commands:
+      - vercel --token $${VERCEL} pull
+      - vercel --token $${VERCEL}
+    secrets: [ VERCEL ]
+    when:
+      event:
+        - push
+        - manual
+      branch:
+        include: [ "*" ]
+        exclude: [ main ]
+
   deploy-production:
     image: codeberg.org/${CI_REPO_OWNER}/vercel
     commands:
@@ -20,6 +35,3 @@ pipeline:
         - push
         - manual
       branch: [ main ]
-
-depends_on:
-  - deploy-preview
