@@ -1,21 +1,24 @@
 pipeline:
   init:
-    image: docker.io/dockette/vercel
+    image: docker.io/library/node
     commands:
+      - npm install -g vercel
       - vercel --token $${VERCEL} project add chloewinkel
-      - vercel --token $${VERCEL} link --confirm -p chloewinkel
+      - vercel --token $${VERCEL} link -p chloewinkel --yes
     secrets: [ VERCEL ]
 
   deploy-preview:
-    image: docker.io/dockette/vercel
+    image: docker.io/library/node
     commands:
+      - npm install -g vercel
       - vercel --token $${VERCEL} pull
       - vercel --token $${VERCEL}
     secrets: [ VERCEL ]
 
   deploy-production:
-    image: docker.io/dockette/vercel
+    image: docker.io/library/node
     commands:
+      - npm install -g vercel
       - vercel --token $${VERCEL} pull
       - vercel --token $${VERCEL} --prod
     secrets: [ VERCEL ]
