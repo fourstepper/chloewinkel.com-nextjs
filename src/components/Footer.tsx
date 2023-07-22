@@ -8,8 +8,15 @@ function Footer() {
       <div className="flex flex-wrap flex-row place-content-center items-center text-center mb-4">
         <p className="px-2 text-l">{"Copyright © Alexandra Chloe Winkel"}</p>
         <div>
-          <FontAwesomeIcon icon={faLinkedin} className="px-2" />
-          <FontAwesomeIcon icon={faBehance} className="px-2" />
+          <a
+            href="https://www.linkedin.com/in/alexandra-chloe-winkel-ab5040180/"
+            target="_blank"
+          >
+            <FontAwesomeIcon icon={faLinkedin} className="px-2" />
+          </a>
+          <a href="https://www.behance.net/winkelchloe" target="_blank">
+            <FontAwesomeIcon icon={faBehance} className="px-2" />
+          </a>
         </div>
       </div>
     </div>
