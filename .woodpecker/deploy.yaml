@@ -5,8 +5,6 @@ pipeline:
       - vercel --token $${VERCEL} project add chloewinkel
       - vercel --token $${VERCEL} link -p chloewinkel --yes
     secrets: [ VERCEL ]
-    when:
-      event: [ push, manual ]
 
   deploy-preview:
     image: codeberg.org/${CI_REPO_OWNER}/vercel
@@ -14,8 +12,6 @@ pipeline:
       - vercel --token $${VERCEL} pull
       - vercel --token $${VERCEL}
     secrets: [ VERCEL ]
-    when:
-      event: [ push ]
 
   deploy-production:
     image: codeberg.org/${CI_REPO_OWNER}/vercel
@@ -24,4 +20,4 @@ pipeline:
       - vercel --token $${VERCEL} --prod
     secrets: [ VERCEL ]
     when:
-      event: [manual]
+      branch: [ master ]
