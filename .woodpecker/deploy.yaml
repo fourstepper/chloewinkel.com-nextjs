@@ -20,6 +20,8 @@ pipeline:
       event:
         - push
         - manual
+      branch:
+        exclude: [ "main" ]
 
   deploy-production:
     image: codeberg.org/${CI_REPO_OWNER}/vercel
