@@ -1,22 +1,8 @@
 pipeline:
-  publish-vercel-image:
-    image: woodpeckerci/plugin-docker-buildx
-    settings:
-      repo: codeberg.org/${CI_REPO_OWNER}/vercel
-      registry: codeberg.org
-      dockerfile: .woodpecker/Dockerfile-vercel
-      tags: latest
-      username: ${CI_REPO_OWNER}
-      password:
-        from_secret: cb_token
-    when:
-      event: [ push ]
-
   init:
     image: codeberg.org/${CI_REPO_OWNER}/vercel
     commands:
       - vercel --token $${VERCEL} project add chloewinkel
-      - vercel --token $${VERCEL} domain add chloewinkel.robinopletal.com
       - vercel --token $${VERCEL} link -p chloewinkel --yes
     secrets: [ VERCEL ]
     when:
