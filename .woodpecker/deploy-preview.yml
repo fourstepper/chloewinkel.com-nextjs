@@ -1,4 +1,14 @@
 pipeline:
+  init:
+    image: codeberg.org/${CI_REPO_OWNER}/vercel
+    commands:
+      - vercel --token $${VERCEL} project add chloewinkel
+      - vercel --token $${VERCEL} link -p chloewinkel --yes
+    secrets: [ VERCEL ]
+    when:
+      event:
+        - push
+        - manual
   deploy-preview:
     image: codeberg.org/${CI_REPO_OWNER}/vercel
     commands:
@@ -9,6 +19,3 @@ pipeline:
       event:
         - push
         - manual
-
-depends_on:
-  - init
