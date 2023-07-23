@@ -1,0 +1,14 @@
+pipeline:
+  deploy-preview:
+    image: codeberg.org/${CI_REPO_OWNER}/vercel
+    commands:
+      - vercel --token $${VERCEL} pull
+      - vercel --token $${VERCEL}
+    secrets: [ VERCEL ]
+    when:
+      event:
+        - push
+        - manual
+
+depends_on:
+  - init
