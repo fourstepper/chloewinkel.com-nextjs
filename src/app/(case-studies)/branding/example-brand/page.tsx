@@ -1,4 +1,5 @@
 import Image from "next/image";
+import nextLogo from "./next.svg";
 
 export default function Brand() {
   return (
@@ -19,7 +20,7 @@ export default function Brand() {
       </p>
       <p className="text-center text-xl">Single Image</p>
       <Image
-        src="/next.svg"
+        src={nextLogo}
         alt="next logo"
         width="400"
         height="30"
@@ -27,15 +28,15 @@ export default function Brand() {
       />
       <p className="text-center text-xl">Double image</p>
       <div className="flex flex-wrap place-content-center gap-8">
-        <Image src="/next.svg" alt="next logo" width="400" height="30" />
-        <Image src="/next.svg" alt="next logo" width="400" height="30" />
+        <Image src={nextLogo} alt="next logo" width="400" height="30" />
+        <Image src={nextLogo} alt="next logo" width="400" height="30" />
       </div>
       <p className="text-center text-xl">Quadro Image</p>
       <div className="flex flex-wrap place-content-center gap-8">
-        <Image src="/next.svg" alt="next logo" width="400" height="30" />
-        <Image src="/next.svg" alt="next logo" width="400" height="30" />
-        <Image src="/next.svg" alt="next logo" width="400" height="30" />
-        <Image src="/next.svg" alt="next logo" width="400" height="30" />
+        <Image src={nextLogo} alt="next logo" width="400" height="30" />
+        <Image src={nextLogo} alt="next logo" width="400" height="30" />
+        <Image src={nextLogo} alt="next logo" width="400" height="30" />
+        <Image src={nextLogo} alt="next logo" width="400" height="30" />
       </div>
     </div>
   );

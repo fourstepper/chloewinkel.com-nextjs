@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import squareImage from "./square.svg";
+// import vercelLogo from "./vercel.svg";
 
 export default async function Brandings() {
   return (
@@ -22,12 +24,12 @@ export default async function Brandings() {
       <div className="flex flex-row place-content-center gap-8">
         <Link href="branding/example-brand">
           <div className="grow relative w-[300px] h-[300px]">
-            <Image src="/square.svg" alt="just a square" fill={true} />
+            <Image src={squareImage} alt="just a square" fill={true} />
           </div>
         </Link>
       </div>
       {/* <div className="grid grid-flow-col justify-items-center pt-8"> */}
-      {/*   <Image src="/vercel.svg" alt="vercel logo" width={1000} height={600} /> */}
+      {/*   <Image src={vercelLogo} alt="vercel logo" width={1000} height={600} /> */}
       {/* </div> */}
       {/* <c.p>This could be some banner or something like that</c.p> */}
     </div>
