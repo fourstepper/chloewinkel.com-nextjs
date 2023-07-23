@@ -1,0 +1,37 @@
+when:
+  event:
+    # don't run on pull requests
+    - push
+    - manual
+
+steps:
+  init:
+    image: codeberg.org/${CI_REPO_OWNER}/vercel
+    commands:
+      - vercel --token $${VERCEL} project add chloewinkel
+      - vercel --token $${VERCEL} link -p chloewinkel --yes
+    secrets: [ VERCEL ]
+
+  build:
+    image: codeberg.org/${CI_REPO_OWNER}/vercel
+    commands:
+      - vercel --token $${VERCEL} pull
+      - vercel build
+    secrets: [ VERCEL ]
+
+  deploy-preview:
+    image: codeberg.org/${CI_REPO_OWNER}/vercel
+    commands:
+      - vercel --token $${VERCEL} deploy --prebuilt | tee url.txt
+    secrets: [ VERCEL ]
+
+  deploy-production:
+    image: codeberg.org/${CI_REPO_OWNER}/vercel
+    commands:
+      - vercel --token $${VERCEL} promote `cat url.txt` --yes
+    secrets: [ VERCEL ]
+    when:
+      - evaluate: CI_COMMIT_BRANCH == CI_REPO_DEFAULT_BRANCH
+        event:
+          - push
+          - manual

@@ -10,5 +10,5 @@ pipeline:
       password:
         from_secret: cb_token
     when:
-      path:
-        include: [ '.woodpecker/publish-vercel-image.yaml', '.woodpecker/images/Dockerfile-vercel' ]
+      - path:
+          include: [ '.woodpecker/publish-vercel-image.yaml', '.woodpecker/images/Dockerfile-vercel' ]
