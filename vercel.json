@@ -1,7 +1,9 @@
 {
-  "devCommand": "next dev --turbo",
   "buildCommand": "next build",
-  "installCommand": "npm install",
+  "devCommand": "next dev --turbo",
   "framework": "nextjs",
-  "regions": ["fra1"]
+  "installCommand": "pnpm install",
+  "regions": [
+    "fra1"
+  ]
 }
