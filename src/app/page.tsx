@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import bannerImg from "./banner.svg";
-import { LayoutMotion } from "../components/Motion";
+import { HandsMotion } from "../components/Motion";
 
 export default function Home() {
   return (
@@ -23,84 +23,7 @@ export default function Home() {
           </Link>
         </div>
         <p className="text-center text-xl">Brands</p>
-        <div>
-          <Link href="branding">
-            <div className={"image-container"}>
-              <Image
-                src={bannerImg}
-                alt="branding"
-                fill={true}
-                className={"image"}
-              />
-            </div>
-          </Link>
-        </div>
-        <p className="text-center text-xl">Brands</p>
-        <div>
-          <Link href="branding">
-            <div className={"image-container"}>
-              <Image
-                src={bannerImg}
-                alt="branding"
-                fill={true}
-                className={"image"}
-              />
-            </div>
-          </Link>
-        </div>
-        <p className="text-center text-xl">Brands</p>
-        <div>
-          <Link href="branding">
-            <div className={"image-container"}>
-              <Image
-                src={bannerImg}
-                alt="branding"
-                fill={true}
-                className={"image"}
-              />
-            </div>
-          </Link>
-        </div>
-        <p className="text-center text-xl">Brands</p>
-        <div>
-          <Link href="branding">
-            <div className={"image-container"}>
-              <Image
-                src={bannerImg}
-                alt="branding"
-                fill={true}
-                className={"image"}
-              />
-            </div>
-          </Link>
-        </div>
-        <p className="text-center text-xl">Brands</p>
-        <div>
-          <Link href="branding">
-            <div className={"image-container"}>
-              <Image
-                src={bannerImg}
-                alt="branding"
-                fill={true}
-                className={"image"}
-              />
-            </div>
-          </Link>
-        </div>
-        <p className="text-center text-xl">Brands</p>
-        <div>
-          <Link href="branding">
-            <div className={"image-container"}>
-              <Image
-                src={bannerImg}
-                alt="branding"
-                fill={true}
-                className={"image"}
-              />
-            </div>
-          </Link>
-        </div>
-        <LayoutMotion />
+        <HandsMotion />
       </div>
     </main>
   );

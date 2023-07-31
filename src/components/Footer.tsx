@@ -12,10 +12,10 @@ function Footer() {
             href="https://www.linkedin.com/in/alexandra-chloe-winkel-ab5040180/"
             target="_blank"
           >
-            <FontAwesomeIcon icon={faLinkedin} className="px-2" />
+            <FontAwesomeIcon icon={faLinkedin} className="px-4" />
           </a>
           <a href="https://www.behance.net/winkelchloe" target="_blank">
-            <FontAwesomeIcon icon={faBehance} className="px-2" />
+            <FontAwesomeIcon icon={faBehance} className="px-4" />
           </a>
         </div>
       </div>
