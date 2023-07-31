@@ -1,9 +1,7 @@
-function Header() {
+export const Header = () => {
   return (
-    <div className="bg-gradient-to-tr hover:bg-gradient-to-bl p-[30px] from-[#7928ca] to-[#ff0080] w-screen text-center">
-      <h1 className="text-8xl text-stone-200 font-sans">Testing</h1>
+    <div className="w-screen bg-gradient-to-tr from-[#7928ca] to-[#ff0080] p-[30px] text-center hover:bg-gradient-to-bl">
+      <h1 className="font-sans text-8xl text-stone-200">Testing</h1>
     </div>
   );
-}
-
-export default Header;
+};

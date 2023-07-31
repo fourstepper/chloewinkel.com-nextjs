@@ -1,11 +1,11 @@
-import Image from "next/image";
-import nextLogo from "./next.svg";
+import nextLogo from './next.svg';
+import Image from 'next/image';
 
-export default function Brand() {
+const Brand = () => {
   return (
     <div className="flex flex-col gap-8">
       <h1 className="text-center text-6xl">Example brand</h1>
-      <p className="text-center text-l">
+      <p className="text-center text-lg">
         Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
         enim labore culpa sint ad nisi Lorem pariatur mollit ex esse
         exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit
@@ -20,24 +20,56 @@ export default function Brand() {
       </p>
       <p className="text-center text-xl">Single Image</p>
       <Image
-        src={nextLogo}
         alt="next logo"
-        width="400"
-        height="30"
         className="m-auto"
+        height="30"
+        src={nextLogo}
+        width="400"
       />
       <p className="text-center text-xl">Double image</p>
       <div className="flex flex-wrap place-content-center gap-8">
-        <Image src={nextLogo} alt="next logo" width="400" height="30" />
-        <Image src={nextLogo} alt="next logo" width="400" height="30" />
+        <Image
+          alt="next logo"
+          height="30"
+          src={nextLogo}
+          width="400"
+        />
+        <Image
+          alt="next logo"
+          height="30"
+          src={nextLogo}
+          width="400"
+        />
       </div>
       <p className="text-center text-xl">Quadro Image</p>
       <div className="flex flex-wrap place-content-center gap-8">
-        <Image src={nextLogo} alt="next logo" width="400" height="30" />
-        <Image src={nextLogo} alt="next logo" width="400" height="30" />
-        <Image src={nextLogo} alt="next logo" width="400" height="30" />
-        <Image src={nextLogo} alt="next logo" width="400" height="30" />
+        <Image
+          alt="next logo"
+          height="30"
+          src={nextLogo}
+          width="400"
+        />
+        <Image
+          alt="next logo"
+          height="30"
+          src={nextLogo}
+          width="400"
+        />
+        <Image
+          alt="next logo"
+          height="30"
+          src={nextLogo}
+          width="400"
+        />
+        <Image
+          alt="next logo"
+          height="30"
+          src={nextLogo}
+          width="400"
+        />
       </div>
     </div>
   );
-}
+};
+
+export default Brand;

@@ -1,3 +1,101 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "extends": [
+    "canonical/auto",
+    "canonical/next",
+    "canonical/prettier",
+    "plugin:tailwindcss/recommended"
+  ],
+  "settings": {
+    "jsdoc": {
+      "mode": "typescript"
+    }
+  },
+  "plugins": [
+    "@next/next",
+    "unused-imports"
+  ],
+  "rules": {
+    // Disable deprecated rules
+    "@next/next/link-passhref": "off",
+    "@next/next/no-script-in-document": "off",
+    "@next/next/no-script-in-head": "off",
+    "@next/next/no-server-import-in-page": "off",
+
+    // Don't forbid classnames and style (we use tailwindcss)
+    "react/forbid-component-props": "off",
+
+    // Use named exports
+    "import/no-default-export": "error",
+
+    // Allow importing styles without assigning them to a variable
+    "import/no-unassigned-import": [
+      "error",
+      {"allow": ["**/*.css"]}
+    ],
+
+    // Don't use extensions for imports except for packages
+    "import/extensions": [
+      "error",
+      "ignorePackages"
+    ],
+
+    // Remove unused imports
+    "unused-imports/no-unused-imports": "warn",
+
+    "canonical/prefer-import-alias": [
+      "error",
+      {
+        "aliases": [
+          {
+            "alias": "@",
+            "matchPath": "^src\\/components\\/",
+            "maxRelativeDepth": 2
+          }
+        ]
+      }
+    ]
+  },
+  "overrides": [
+    // Overrides for typescript definitions
+    {
+      "files": [
+        "*.d.ts"
+      ],
+      "rules": {
+        "camelcase": "off",
+        "@typescript-eslint/consistent-type-imports": "off",
+        "import/no-default-export": "off"
+      }
+    },
+    // Use vanilla eslint rules for json file
+    {
+      "files": ["*.json"],
+      "rules": {
+        "prettier/prettier": "off"
+      }
+    },
+    // Options for config files
+    {
+      "files": ["*.config.js", "*.config.ts"],
+      "rules": {
+        "import/no-default-export": "off",
+        "import/prefer-default-export": "error",
+        "no-process-env": "off",
+        "node/no-process-env": "off"
+      }
+    },
+    // Disable filename matching and force default export for next files
+    {
+      "files": [
+        "src/app/**/{error,layout,loading,not-found,page,template,default,route,metadata}.{ts,tsx}",
+        "src/app/{global-error,icon,app-icon}.{ts,tsx}"
+      ],
+      "rules": {
+        "canonical/filename-match-exported": "off",
+        "import/no-default-export": "off",
+        "import/prefer-default-export": "error"
+      }
+    }
+  ]
 }
