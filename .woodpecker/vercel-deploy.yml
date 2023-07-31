@@ -6,7 +6,7 @@ when:
 
 steps:
   init:
-    image: codeberg.org/${CI_REPO_OWNER}/vercel
+    image: codeberg.org/${CI_REPO_OWNER}/vercel:latest
     commands:
       - vercel --token $${VERCEL} project add chloewinkel
       - vercel --token $${VERCEL} link -p chloewinkel --yes
@@ -20,13 +20,13 @@ steps:
     secrets: [ VERCEL ]
 
   deploy-preview:
-    image: codeberg.org/${CI_REPO_OWNER}/vercel
+    image: codeberg.org/${CI_REPO_OWNER}/vercel:latest
     commands:
       - vercel --token $${VERCEL} deploy --prebuilt | tee url.txt
     secrets: [ VERCEL ]
 
   deploy-production:
-    image: codeberg.org/${CI_REPO_OWNER}/vercel
+    image: codeberg.org/${CI_REPO_OWNER}/vercel:latest
     commands:
       - vercel --token $${VERCEL} promote `cat url.txt` --yes
     secrets: [ VERCEL ]
