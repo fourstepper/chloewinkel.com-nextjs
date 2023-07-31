@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   animate,
@@ -6,8 +6,8 @@ import {
   useInView,
   useMotionTemplate,
   useMotionValue,
-} from 'framer-motion';
-import { useEffect, useRef } from 'react';
+} from "framer-motion";
+import { useEffect, useRef } from "react";
 
 export const Hands = () => {
   const scope = useRef<HTMLDivElement>(null);
@@ -21,8 +21,8 @@ export const Hands = () => {
     (async () => {
       const handsPrepare = animate(value, -0.1, {
         duration: 0.5,
-        ease: 'easeInOut',
-        type: 'tween',
+        ease: "easeInOut",
+        type: "tween",
       });
       stopAnimation = handsPrepare.stop;
       await handsPrepare;
@@ -34,15 +34,15 @@ export const Hands = () => {
           }
         },
         stiffness: 100,
-        type: 'spring',
+        type: "spring",
       });
       stopAnimation = handsHit.stop;
       await handsHit;
 
       const handsReset = animate(value, 0.4, {
         duration: 1,
-        ease: 'easeInOut',
-        type: 'tween',
+        ease: "easeInOut",
+        type: "tween",
       });
 
       stopAnimation = handsReset.stop;
@@ -69,7 +69,7 @@ export const Hands = () => {
           className="m-auto max-w-[80px] text-center text-4xl italic"
           style={{
             opacity: inView ? 1 : 0,
-            transition: 'all 0.9s 1.25s',
+            transition: "all 0.9s 1.25s",
           }}
         >
           hi!
@@ -78,7 +78,7 @@ export const Hands = () => {
           className="m-auto max-w-[80px] text-center"
           style={{
             opacity: inView ? 1 : 0,
-            transition: 'all 1.2s 1.25s',
+            transition: "all 1.2s 1.25s",
           }}
         >
           about me

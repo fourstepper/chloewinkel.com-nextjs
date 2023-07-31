@@ -54,6 +54,15 @@
           }
         ]
       }
+    ],
+
+    // Allow setting prettier config through .prettierrc
+    "prettier/prettier": [
+      "warn",
+      {},
+      {
+        "usePrettierrc": true
+      }
     ]
   },
   "overrides": [

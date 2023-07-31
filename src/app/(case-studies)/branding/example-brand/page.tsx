@@ -1,5 +1,5 @@
-import nextLogo from './next.svg';
-import Image from 'next/image';
+import nextLogo from "./next.svg";
+import Image from "next/image";
 
 const Brand = () => {
   return (

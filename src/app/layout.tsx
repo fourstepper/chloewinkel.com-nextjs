@@ -1,20 +1,20 @@
-import './globals.css';
-import '@fortawesome/fontawesome-svg-core/styles.css';
-import { Footer } from '@Footer';
-import { config } from '@fortawesome/fontawesome-svg-core';
-import { type Metadata } from 'next';
-import { Syne } from 'next/font/google';
-import { type PropsWithChildren } from 'react';
+import "./globals.css";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { Footer } from "@Footer";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import { type Metadata } from "next";
+import { Syne } from "next/font/google";
+import { type PropsWithChildren } from "react";
 
 config.autoAddCss = false;
 
 const font = Syne({
-  subsets: ['latin'],
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  description: 'Graphic designer, illustrator and photographer',
-  title: 'Chloe Winkel',
+  description: "Graphic designer, illustrator and photographer",
+  title: "Chloe Winkel",
 };
 
 const RootLayout = ({ children }: PropsWithChildren) => {

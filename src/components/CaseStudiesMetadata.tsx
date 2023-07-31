@@ -1,9 +1,9 @@
-import { readdir, readFile } from 'fs/promises';
+import { readdir, readFile } from "fs/promises";
 // import fs from "fs";
-import path from 'path';
-import YAML from 'yaml';
+import path from "path";
+import YAML from "yaml";
 
-const PATH = path.join(process.cwd(), 'src/app/case-studies');
+const PATH = path.join(process.cwd(), "src/app/case-studies");
 
 // get a list of directories (routes) in the case-studies dir
 const getDirectories = async (path_: string) =>
@@ -22,7 +22,7 @@ export const CaseStudiesMetadata = async () => {
   for (const directory of directories) {
     const config = async () => {
       return YAML.parse(
-        await readFile(path.join(PATH, `./${directory}/config.yaml`), 'utf8'),
+        await readFile(path.join(PATH, `./${directory}/config.yaml`), "utf8"),
       );
     };
 

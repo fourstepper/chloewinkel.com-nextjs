@@ -1,6 +1,6 @@
-import squareImage from './square.svg';
-import Image from 'next/image';
-import Link from 'next/link';
+import squareImage from "./square.svg";
+import Image from "next/image";
+import Link from "next/link";
 // import vercelLogo from "./vercel.svg";
 
 export default async function Brandings() {

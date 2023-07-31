@@ -1,7 +1,7 @@
-import bannerImg from './banner.svg';
-import { Hands } from '@Hands';
-import Image from 'next/image';
-import Link from 'next/link';
+import bannerImg from "./banner.svg";
+import { Hands } from "@Hands";
+import Image from "next/image";
+import Link from "next/link";
 
 const Home = () => {
   return (
