@@ -1,39 +1,44 @@
 import "./globals.css";
-
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import { Footer } from "@Footer";
 import { config } from "@fortawesome/fontawesome-svg-core";
-config.autoAddCss = false;
-
-import type { Metadata } from "next";
-import Footer from "../components/Footer";
+import { type Metadata } from "next";
 import { Syne } from "next/font/google";
+import { type PropsWithChildren } from "react";
+
+config.autoAddCss = false;
 
 const font = Syne({
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Chloe Winkel",
   description: "Graphic designer, illustrator and photographer",
+  title: "Chloe Winkel",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const RootLayout = ({ children }: PropsWithChildren) => {
   return (
-    <html lang="en" className={font.className}>
+    <html
+      className={font.className}
+      lang="en"
+    >
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link
+          href="/favicon.ico"
+          rel="icon"
+          sizes="any"
+        />
       </head>
-      <body className="flex flex-col h-screen justify-between items-center">
+      <body className="flex h-screen flex-col items-center justify-between">
         {/* this div seems to be our "container" */}
-        <div className="flex flex-wrap flex-row justify-items-center place-content-center mb-auto p-12 container mx-auto">
+        <div className="container mx-auto mb-auto flex flex-row flex-wrap place-content-center justify-items-center p-12">
           {children}
         </div>
-        <Footer></Footer>
+        <Footer />
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

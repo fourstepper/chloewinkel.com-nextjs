@@ -1,13 +1,13 @@
+import squareImage from "./square.svg";
 import Image from "next/image";
 import Link from "next/link";
-import squareImage from "./square.svg";
 // import vercelLogo from "./vercel.svg";
 
 export default async function Brandings() {
   return (
     <div className="flex flex-col gap-8">
       <h1 className="text-center text-6xl">Branding case studies </h1>
-      <p className="text-l text-center">
+      <p className="text-center text-lg">
         Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
         enim labore culpa sint ad nisi Lorem pariatur mollit ex esse
         exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit
@@ -20,11 +20,15 @@ export default async function Brandings() {
         Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa
         et culpa duis.
       </p>
-      <p className="text-xl text-center">Example case study</p>
+      <p className="text-center text-xl">Example case study</p>
       <div className="flex flex-row place-content-center gap-8">
         <Link href="branding/example-brand">
-          <div className="grow relative w-[300px] h-[300px]">
-            <Image src={squareImage} alt="just a square" fill={true} />
+          <div className="relative h-[300px] w-[300px] grow">
+            <Image
+              alt="just a square"
+              fill
+              src={squareImage}
+            />
           </div>
         </Link>
       </div>

@@ -1,0 +1,8 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    "files.autoSave": "afterDelay",
+    "prettier.endOfLine": "auto",
+    "typescript.tsdk": "node_modules/typescript/lib",
+}
