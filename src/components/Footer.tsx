@@ -9,6 +9,7 @@ export const Footer = () => {
         <p className="px-2 text-lg">Copyright © Alexandra Chloe Winkel</p>
         <div>
           <a
+            aria-label="Linkedin"
             href="https://www.linkedin.com/in/alexandra-chloe-winkel-ab5040180/"
             rel="noreferrer"
             target="_blank"
@@ -19,6 +20,7 @@ export const Footer = () => {
             />
           </a>
           <a
+            aria-label="Behance"
             href="https://www.behance.net/winkelchloe"
             rel="noreferrer"
             target="_blank"
