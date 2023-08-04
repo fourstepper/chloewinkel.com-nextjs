@@ -1,5 +1,6 @@
 import bannerImg from "./banner.svg";
 import { Hands } from "@Hands";
+import Header from "@Header";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,7 +8,7 @@ const Home = () => {
   return (
     <main>
       <div className="flex flex-col gap-8">
-        <h1 className="text-center text-6xl">Chloe Winkel</h1>
+        <Header heading="Chloe Winkel" />
         <div className="gap-y-8" />
         <p className="text-center text-xl">Brands</p>
         <div>

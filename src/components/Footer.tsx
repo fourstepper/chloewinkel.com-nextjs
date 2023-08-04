@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export const Footer = () => {
   return (
     <div className="w-screen bg-gray-50">
-      <hr className="mb-4 h-px border-0 bg-gray-200 dark:bg-gray-700" />
+      <hr className="mb-4 h-px border-0 bg-gray-200" />
       <div className="mb-4 flex flex-row flex-wrap place-content-center items-center text-center">
         <p className="px-2 text-lg">Copyright © Alexandra Chloe Winkel</p>
         <div>
