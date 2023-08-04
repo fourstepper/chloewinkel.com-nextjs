@@ -2,8 +2,8 @@
   "root": true,
   "extends": [
     "canonical/auto",
-    "canonical/next",
     "canonical/prettier",
+    "canonical/next",
     "plugin:tailwindcss/recommended"
   ],
   "settings": {
@@ -11,10 +11,7 @@
       "mode": "typescript"
     }
   },
-  "plugins": [
-    "@next/next",
-    "unused-imports"
-  ],
+  "plugins": ["@next/next", "unused-imports"],
   "rules": {
     // Disable deprecated rules
     "@next/next/link-passhref": "off",
@@ -29,16 +26,10 @@
     "import/no-default-export": "error",
 
     // Allow importing styles without assigning them to a variable
-    "import/no-unassigned-import": [
-      "error",
-      {"allow": ["**/*.css"]}
-    ],
+    "import/no-unassigned-import": ["error", { "allow": ["**/*.css"] }],
 
     // Don't use extensions for imports except for packages
-    "import/extensions": [
-      "error",
-      "ignorePackages"
-    ],
+    "import/extensions": ["error", "ignorePackages"],
 
     // Remove unused imports
     "unused-imports/no-unused-imports": "warn",
@@ -68,9 +59,7 @@
   "overrides": [
     // Overrides for typescript definitions
     {
-      "files": [
-        "*.d.ts"
-      ],
+      "files": ["*.d.ts"],
       "rules": {
         "camelcase": "off",
         "@typescript-eslint/consistent-type-imports": "off",

@@ -1,6 +1,6 @@
-import Header from "@Header";
-import BackHome from "@BackHome";
-import GraphicDesignLinkBox from "@GraphicDesignLinkBox";
+import { BackHome } from "@BackHome";
+import { GraphicDesignLinkBox } from "@GraphicDesignLinkBox";
+import { Header } from "@Header";
 
 const GraphicDesign = () => {
   return (
@@ -8,33 +8,33 @@ const GraphicDesign = () => {
       <Header heading="Graphic Design" />
       <div className="flex flex-row flex-wrap place-content-center items-center gap-x-16 xl:gap-x-32">
         <GraphicDesignLinkBox
+          description="a sneaker brand"
           href="/graphic-design/hermes"
           title="hermes"
-          description="a sneaker brand"
           year="2021"
         />
         <GraphicDesignLinkBox
+          description="a tree discovery website"
           href="/graphic-design/stromy-trebonska"
           title="stromy třeboňska"
-          description="a tree discovery website"
           year="2023"
         />
         <GraphicDesignLinkBox
+          description="a sneaker brand"
           href="/graphic-design/hermes"
           title="hermes"
-          description="a sneaker brand"
           year="2021"
         />
         <GraphicDesignLinkBox
+          description="a tree discovery website"
           href="/graphic-design/stromy-trebonska"
           title="stromy třeboňska"
-          description="a tree discovery website"
           year="2023"
         />
         <GraphicDesignLinkBox
+          description="a tree discovery website"
           href="/graphic-design/stromy-trebonska"
           title="stromy třeboňska"
-          description="a tree discovery website"
           year="2023"
         />
       </div>

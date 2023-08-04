@@ -1,6 +1,6 @@
 import bannerImg from "./banner.svg";
 import { Hands } from "@Hands";
-import Header from "@Header";
+import { Header } from "@Header";
 import Image from "next/image";
 import Link from "next/link";
 
