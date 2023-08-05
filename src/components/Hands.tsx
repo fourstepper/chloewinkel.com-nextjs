@@ -27,7 +27,7 @@ export const Hands = () => {
       stopAnimation = handsPrepare.stop;
       await handsPrepare;
 
-      const handsHit = animate(value, 1, {
+      const handsHit = animate(value, 1.85, {
         onUpdate: (value_) => {
           if (value_ >= 1) {
             handsHit.stop();

@@ -30,9 +30,9 @@ const RootLayout = ({ children }: PropsWithChildren) => {
           sizes="any"
         />
       </head>
-      <body className="flex h-screen flex-col items-center justify-between">
+      <body className="flex h-screen flex-col items-center justify-between bg-[#f3f3f3]">
         {/* this div seems to be our "container" */}
-        <div className="container mx-auto mb-auto flex flex-row flex-wrap place-content-center justify-items-center p-12">
+        <div className="container mx-auto mb-auto flex flex-row flex-wrap place-content-center p-12">
           {children}
         </div>
         <Footer />
