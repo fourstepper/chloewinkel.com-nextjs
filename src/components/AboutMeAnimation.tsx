@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 import { useEffect, useRef } from "react";
 
-export const Hands = () => {
+export const AboutMeAnimation = () => {
   const scope = useRef<HTMLDivElement>(null);
   const inView = useInView(scope, { once: true });
 
@@ -66,7 +66,7 @@ export const Hands = () => {
       />
       <div>
         <motion.p
-          className="m-auto max-w-[80px] text-center text-4xl italic"
+          className="m-auto max-w-[80px] text-center text-4xl"
           style={{
             opacity: inView ? 1 : 0,
             transition: "all 0.9s 1.25s",
@@ -75,7 +75,7 @@ export const Hands = () => {
           hi!
         </motion.p>
         <motion.p
-          className="m-auto max-w-[80px] text-center"
+          className="m-auto max-w-[80px] text-center text-lg"
           style={{
             opacity: inView ? 1 : 0,
             transition: "all 1.2s 1.25s",

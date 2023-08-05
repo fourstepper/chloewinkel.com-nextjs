@@ -1,4 +1,4 @@
-import { Hands } from "@Hands";
+import { AboutMeAnimation } from "@AboutMeAnimation";
 import { Header } from "@Header";
 import Link from "next/link";
 
@@ -13,7 +13,7 @@ const Home = () => {
         </Link>
         <div className="gap-y-8" />
         <Link href="/about-me">
-          <Hands />
+          <AboutMeAnimation />
         </Link>
       </div>
     </main>
