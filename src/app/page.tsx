@@ -1,5 +1,6 @@
 import { Hands } from "@Hands";
 import { Header } from "@Header";
+import Link from "next/link";
 
 const Home = () => {
   return (
@@ -7,8 +8,12 @@ const Home = () => {
       <div className="container flex w-[250px] flex-col gap-8 sm:w-[450px] md:w-[600px] ">
         <Header heading="Chloe Winkel" />
         <div className="gap-y-8" />
-        <p className="grow text-center text-4xl">Graphic Design</p>
-        <Hands />
+        <Link href="graphic-design">
+          <p className="grow text-center text-4xl">Graphic Design</p>
+        </Link>
+        <Link href="/about-me">
+          <Hands />
+        </Link>
       </div>
     </main>
   );
