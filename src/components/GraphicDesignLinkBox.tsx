@@ -28,9 +28,9 @@ export const GraphicDesignLinkBox = ({
             />
           </div>
         </div>
-        <p className="absolute bottom-2 right-2 text-center text-lg text-lime-700">
+        <div className="absolute bottom-2 right-1 w-11 rounded-r-xl bg-black text-center text-lg text-[#f3f3f3]">
           {year}
-        </p>
+        </div>
       </div>
     </Link>
   );
