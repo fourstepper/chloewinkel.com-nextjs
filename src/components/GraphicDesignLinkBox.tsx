@@ -15,8 +15,8 @@ export const GraphicDesignLinkBox = ({
 }) => {
   return (
     <Link href={href}>
-      <div className="relative h-72 w-72">
-        <div className="relative top-[100%] h-60 w-60 translate-y-[-100%] border-2 border-solid border-black">
+      <div className="h-48 w-48 sm:h-72 sm:w-72">
+        <div className="relative top-[100%] m-auto h-[100%] w-[100%] translate-y-[-100%] border-2 border-solid border-black">
           <p className="absolute left-4 top-2 w-36 text-2xl">{title}</p>
           <p className="absolute bottom-2 left-4 text-xl">{description}</p>
           <div className="absolute right-0 top-0">
@@ -27,9 +27,9 @@ export const GraphicDesignLinkBox = ({
               width={40}
             />
           </div>
-        </div>
-        <div className="absolute bottom-2 right-1 w-11 rounded-r-xl bg-black text-center text-lg text-[#f3f3f3]">
-          {year}
+          <div className="absolute -right-11 bottom-2 w-11 rounded-r-xl bg-black text-center text-lg text-[#f3f3f3]">
+            {year}
+          </div>
         </div>
       </div>
     </Link>

@@ -3,7 +3,5 @@
   "devCommand": "next dev --turbo",
   "framework": "nextjs",
   "installCommand": "pnpm install",
-  "regions": [
-    "fra1"
-  ]
+  "regions": ["fra1"]
 }

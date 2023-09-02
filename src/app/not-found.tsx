@@ -1,10 +1,12 @@
 import { BackHome } from "@BackHome";
+import { Header } from "@Header";
 
 const NotFoundError = () => {
   return (
-    <div className="top-[30%] fixed">
-      <h1 className="text-8xl">Page not found, sorry!</h1>
-      <div className="py-16" />
+    <div>
+      {/* <h1 className="text-6xl">Page not found, sorry!</h1> */}
+      <Header heading="Page not found, sorry!" />
+      <div className="my-16" />
       <BackHome />
     </div>
   );

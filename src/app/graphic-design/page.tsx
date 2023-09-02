@@ -6,7 +6,7 @@ const GraphicDesign = () => {
   return (
     <div className="flex flex-col gap-8">
       <Header heading="Graphic Design" />
-      <div className="flex flex-row flex-wrap place-content-center items-center gap-x-16 xl:gap-x-32">
+      <div className="flex flex-row flex-wrap place-content-center items-center gap-x-16 gap-y-8 xl:gap-x-32">
         <GraphicDesignLinkBox
           description="a sneaker brand"
           href="/graphic-design/hermes"
