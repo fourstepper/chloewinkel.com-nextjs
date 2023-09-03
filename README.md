@@ -1,4 +1,4 @@
-[![status-badge](https://ci.codeberg.org/api/badges/12472/status.svg)](https://ci.codeberg.org/12472)
+[![status-badge](https://ci.codeberg.org/api/badges/12472/status.svg)](https://ci.codeberg.org/repos/12472)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
